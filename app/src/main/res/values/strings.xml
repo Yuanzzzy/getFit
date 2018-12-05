@@ -1,9 +1,19 @@
 <resources>
-    <string name="app_name"> Get Fit </string>
+    <string name="app_name"> getFit </string>
     <string name="input_time"> WORKOUT TIME </string>
     <string name="button_label"> Enter </string>
     <string name="timer_label">How Much Time Do You Have?</string>
     <string name="time_unit">MINUTES</string>
     <string name="muscle_qustion">What Muscles Do You Want To Tone?</string>
     <string name="button_function">Next</string>
+    <string name="muscle_part1">Abs</string>
+    <string name="muscle_part2">Quads</string>
+    <string name="muscle_part3">Glutes</string>
+    <string name="muscle_part4">Triceps</string>
+    <string name="muscle_part5">Biceps</string>
+    <string name="muscle_part6">Back</string>
+    <string name="muscle_part7">Chest</string>
+    <string name="muscle_selection">muscles</string>
+    <string name="button_go">GENERATE WORKOUT</string>
+    <string name="generatingpage">generatingpic</string>
 </resources>

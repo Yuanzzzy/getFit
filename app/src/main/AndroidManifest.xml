@@ -22,7 +22,9 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".MuscleSelection"></activity>
+        <activity android:name=".MuscleSelection" />
+        <activity android:name=".GeneratingScreen" />
+        <activity android:name=".ListView"></activity>
     </application>
 
 </manifest>

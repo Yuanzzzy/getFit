@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 
 public class openingPage extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 4000;
+    private static int SPLASH_TIME_OUT = 3000;
 
     String description = "Get Fit with Simple Workout";
 

@@ -36,8 +36,8 @@
         android:layout_marginStart="44dp"
         android:layout_marginTop="258dp"
         android:ems="10"
-        android:inputType="time"
-        android:text="@string/button_label" />
+        android:hint="@string/button_label"
+        android:inputType="time" />
 
     <TextView
         android:id="@+id/textView3"
