@@ -2,7 +2,7 @@ package com.example.liyuanzzzy.getfit;
 import java.util.Random;
 import java.util.List;
 import java.util.ArrayList;
-
+import java.lang.Math;
 
 
 
@@ -21,13 +21,24 @@ public class GenerateWorkout {
                 }
             }
         }
-        return potentialExercises;
+        ArrayList<Exercise> finalWorkout = new ArrayList<Exercise>();
+        double exerciseCount = duration/1.5;
+        int exerciseNum = (int) java.lang.Math.ceil(exerciseCount);
+        for (int i = 0; i < exerciseNum; i++) {
+            finalWorkout.add(potentialExercises.get(randInt(0, potentialExercises.size())));
+        }
+        return finalWorkout;
+    }
+    private static int randInt(int min, int max) {
+        Random rand = new Random();
+        int randomNum = rand.nextInt((max - min)) - min;
+
+        return randomNum;
     }
 
 
     public static void main(String[] unused) {
         ArrayList<String> muscleArray = new ArrayList<String>();
-        muscleArray.add("Back");
         muscleArray.add("Biceps");
         muscleArray.add("Abs");
         int freeTime = 30;

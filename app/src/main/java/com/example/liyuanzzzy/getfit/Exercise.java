@@ -31,7 +31,6 @@ public class Exercise {
         exercises.add(new Exercise("Sitting Pull-Ups", "Biceps"));
         exercises.add(new Exercise("Pseudo Planche", "Biceps"));
         exercises.add(new Exercise("Close Grip Push-Ups", "Triceps"));
-        exercises.add(new Exercise("Close Grip Push-Ups", "Triceps"));
         exercises.add(new Exercise("Tricep Dips", "Triceps"));
         exercises.add(new Exercise("Tricep Extensions", "Triceps"));
         exercises.add(new Exercise("Get-Ups", "Triceps"));
