@@ -2,6 +2,9 @@ package com.example.liyuanzzzy.getfit;
 import java.util.List;
 import java.util.ArrayList;
 
+/**
+ * Class that contains all possible exercises.
+ */
 public class Exercise {
     public String name;
     public String muscle;
@@ -10,6 +13,10 @@ public class Exercise {
         this.muscle = setMuscle;
     }
 
+    /**
+     * Getter for all exercises.
+     * @return ArrayList containing all exercises.
+     */
     public static ArrayList<Exercise> getAllExercises() {
         ArrayList<Exercise> exercises = new ArrayList<Exercise>();
         exercises.add(new Exercise("Push-Ups", "Chest"));

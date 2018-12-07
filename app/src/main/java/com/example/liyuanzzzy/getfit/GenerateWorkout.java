@@ -5,10 +5,16 @@ import java.util.ArrayList;
 import java.lang.Math;
 
 
-
-
-
+/**
+ * Class that contains functions for generating workouts with given duration and muscle groups.
+ */
 public class GenerateWorkout {
+    /**
+     * Actual functiont hat generates the workout as an array.
+     * @param duration int duration of workout in minutes.
+     * @param muscles string array of muscles that individual wants to train.
+     * @return ArrayList of exercises to perform over given amount of time.
+     */
     public static ArrayList<Exercise> generate(int duration, ArrayList<String> muscles) {
         ArrayList<Exercise> potentialExercises = new ArrayList<Exercise>();
         ArrayList<Exercise> allExercises = Exercise.getAllExercises();
@@ -29,6 +35,13 @@ public class GenerateWorkout {
         }
         return finalWorkout;
     }
+
+    /**
+     * Helper function to generate a random integer between two values.
+     * @param min minimum bound for random integer.
+     * @param max maximum bound for random integer.
+     * @return random integer between min and max.
+     */
     private static int randInt(int min, int max) {
         Random rand = new Random();
         int randomNum = rand.nextInt((max - min)) - min;
@@ -41,6 +54,7 @@ public class GenerateWorkout {
         ArrayList<String> muscleArray = new ArrayList<String>();
         muscleArray.add("Biceps");
         muscleArray.add("Abs");
+        muscleArray.add("Back");
         int freeTime = 30;
         ArrayList<Exercise> testArr = generate(freeTime, muscleArray);
         for(int i = 0; i < testArr.size(); i++) {
