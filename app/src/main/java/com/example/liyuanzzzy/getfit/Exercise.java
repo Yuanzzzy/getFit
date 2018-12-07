@@ -1,0 +1,44 @@
+package com.example.liyuanzzzy.getfit;
+import java.util.List;
+import java.util.ArrayList;
+
+public class Exercise {
+    public String name;
+    public String muscle;
+    Exercise(String setName, String setMuscle) {
+        this.name = setName;
+        this.muscle = setMuscle;
+    }
+
+    public static ArrayList<Exercise> getAllExercises() {
+        ArrayList<Exercise> exercises = new ArrayList<Exercise>();
+        exercises.add(new Exercise("Push-Ups", "Chest"));
+        exercises.add(new Exercise("Plank Rotations", "Chest"));
+        exercises.add(new Exercise("Chest Squeezes", "Chest"));
+        exercises.add(new Exercise("Shoulder Press", "Chest"));
+        exercises.add(new Exercise("Shoulder Taps", "Chest"));
+        exercises.add(new Exercise("Clapping Push-Ups", "Chest"));
+        exercises.add(new Exercise("Pull-Ups", "Back"));
+        exercises.add(new Exercise("Elbow Lifts", "Back"));
+        exercises.add(new Exercise("Supermans", "Back"));
+        exercises.add(new Exercise("Stair Plank", "Back"));
+        exercises.add(new Exercise("Alt-Arm/Leg Plank", "Back"));
+        exercises.add(new Exercise("Full Arch", "Back"));
+        exercises.add(new Exercise("Leg Curls", "Biceps"));
+        exercises.add(new Exercise("Chin-Ups", "Biceps"));
+        exercises.add(new Exercise("Doorframe Rows", "Biceps"));
+        exercises.add(new Exercise("Body Rows", "Biceps"));
+        exercises.add(new Exercise("Sitting Pull-Ups", "Biceps"));
+        exercises.add(new Exercise("Pseudo Planche", "Biceps"));
+
+        return exercises;
+
+
+    }
+
+
+}
+
+
+
+
