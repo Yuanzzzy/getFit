@@ -30,6 +30,34 @@ public class Exercise {
         exercises.add(new Exercise("Body Rows", "Biceps"));
         exercises.add(new Exercise("Sitting Pull-Ups", "Biceps"));
         exercises.add(new Exercise("Pseudo Planche", "Biceps"));
+        exercises.add(new Exercise("Close Grip Push-Ups", "Triceps"));
+        exercises.add(new Exercise("Close Grip Push-Ups", "Triceps"));
+        exercises.add(new Exercise("Tricep Dips", "Triceps"));
+        exercises.add(new Exercise("Tricep Extensions", "Triceps"));
+        exercises.add(new Exercise("Get-Ups", "Triceps"));
+        exercises.add(new Exercise("Punches", "Triceps"));
+        exercises.add(new Exercise("Close Grip Push-Ups", "Triceps"));
+        exercises.add(new Exercise("Side-to-Side Chops", "Triceps"));
+        exercises.add(new Exercise("Squats", "Glutes"));
+        exercises.add(new Exercise("Donkey Kick", "Glutes"));
+        exercises.add(new Exercise("Bridges", "Glutes"));
+        exercises.add(new Exercise("Jump Knee Kicks", "Glutes"));
+        exercises.add(new Exercise("Fly Steps", "Glutes"));
+        exercises.add(new Exercise("Side Leg Raises", "Glutes"));
+        exercises.add(new Exercise("Lunges", "Quads"));
+        exercises.add(new Exercise("High Knees Running", "Quads"));
+        exercises.add(new Exercise("Turning Kick", "Quads"));
+        exercises.add(new Exercise("Climbers", "Quads"));
+        exercises.add(new Exercise("Plank Jump-Ins", "Quads"));
+        exercises.add(new Exercise("Lunges + Step-Ups", "Quads"));
+        exercises.add(new Exercise("Sit-Ups", "Abs"));
+        exercises.add(new Exercise("Reverse Crunches", "Abs"));
+        exercises.add(new Exercise("Bicycle Crunches", "Abs"));
+        exercises.add(new Exercise("Flutter Kicks", "Abs"));
+        exercises.add(new Exercise("Leg Raises", "Abs"));
+        exercises.add(new Exercise("Elbow Planks", "Abs"));
+
+
 
         return exercises;
 
