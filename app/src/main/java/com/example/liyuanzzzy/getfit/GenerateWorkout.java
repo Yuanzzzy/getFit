@@ -49,18 +49,18 @@ public class GenerateWorkout {
         return randomNum;
     }
 
-
-    public static void main(String[] unused) {
-        ArrayList<String> muscleArray = new ArrayList<String>();
-        muscleArray.add("Biceps");
-        muscleArray.add("Abs");
-        muscleArray.add("Back");
-        int freeTime = 30;
-        ArrayList<Exercise> testArr = generate(freeTime, muscleArray);
-        for(int i = 0; i < testArr.size(); i++) {
-            System.out.println(testArr.get(i).name);
-        }
-    }
+//
+//    public static void main(String[] unused) {
+//        ArrayList<String> muscleArray = new ArrayList<String>();
+//        muscleArray.add("Biceps");
+//        muscleArray.add("Abs");
+//        muscleArray.add("Back");
+//        int freeTime = 3;
+//        ArrayList<Exercise> testArr = generate(freeTime, muscleArray);
+//        for(int i = 0; i < testArr.size(); i++) {
+//            System.out.println(testArr.get(i).name);
+//        }
+//    }
 }
 
 

@@ -20,6 +20,7 @@ public class MuscleSelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_muscle_selection);
     }
+
     public void selectItem(View view) {
         boolean checked = ((CheckBox) view).isChecked();
         switch (view.getId()) {
@@ -74,22 +75,16 @@ public class MuscleSelection extends AppCompatActivity {
                 break;
         }
 
-
-//    public void finalSelection(View view) {
-//        String final_muscles = "";
-//        for (String muscles : selection) {
-//            final_muscles = final_muscles + muscles;
-//        }
-//
-//    }
-
         Button generatingBut = (Button)findViewById(R.id.button_generate);
         generatingBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MuscleSelection.this, GeneratingScreen.class);
+                Bundle extras = getIntent().getExtras();
+                String timer = extras.getString("timer");
+                i.putExtra("timer", timer);
+                i.putExtra("muscle", selection);
                 startActivity(i);
-
             }
         });
     }

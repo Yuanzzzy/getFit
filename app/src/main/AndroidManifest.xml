@@ -24,7 +24,9 @@
 
         <activity android:name=".MuscleSelection" />
         <activity android:name=".GeneratingScreen" />
-        <activity android:name=".ListView"></activity>
+        <activity android:name=".EndScreen" />
+        <activity android:name=".CountTimer" />
+        <activity android:name=".UserWorkout" />
     </application>
 
 </manifest>

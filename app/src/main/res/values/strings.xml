@@ -16,4 +16,15 @@
     <string name="muscle_selection">muscles</string>
     <string name="button_go">GENERATE WORKOUT</string>
     <string name="generatingpage">generatingpic</string>
+    <string name="list_view">YOUR WORKOUT TOTAL TIME:</string>
+    <string name="startworkout">START NOW!</string>
+    <string name="regenerate_workout">REGENERATE</string>
+    <string name="text_timeremaining">TIME REMAINING</string>
+    <string name="text_name">ExerciseName</string>
+    <string name="timer_button">PAUSE</string>
+    <string name="timer_reset">RESET</string>
+    <string name="finish_line">WORKOUT COMPLETE! NICE</string>
+    <string name="button_EXIT">EXIT</string>
+    <string name="button_goAgain">GO AGAIN?</string>
+
 </resources>
