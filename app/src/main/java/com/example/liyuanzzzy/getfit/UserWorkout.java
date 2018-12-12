@@ -54,7 +54,7 @@ public class UserWorkout extends AppCompatActivity implements View.OnClickListen
 //        displayWorkout.setAdapter(adapter);
         TextView wrklist = (TextView)findViewById(R.id.workOut_list);
         for (int i = 0; i < finalWorkout.size(); i++) {
-            wrklist.setText(wrklist.getText() + finalWorkout.get(i).name + "  1 MINUTE\n" + "30 Sec Break\n");
+            wrklist.setText(wrklist.getText() + finalWorkout.get(i).name + "  1 min.\n" + "30 sec. break\n");
         }
 
     }
@@ -63,8 +63,7 @@ public class UserWorkout extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_start:
-                Intent i = new Intent(UserWorkout.this, CountDownTimer.class);
-
+                Intent i = new Intent(UserWorkout.this, EndScreen.class);
                 startActivity(i);
                 break;
             case R.id.button2_regenerate:
