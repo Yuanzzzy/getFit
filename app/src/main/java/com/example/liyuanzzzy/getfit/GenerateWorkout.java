@@ -1,8 +1,7 @@
 package com.example.liyuanzzzy.getfit;
 import java.util.Random;
-import java.util.List;
 import java.util.ArrayList;
-import java.lang.Math;
+
 
 
 /**
@@ -10,7 +9,7 @@ import java.lang.Math;
  */
 public class GenerateWorkout {
     /**
-     * Actual functiont hat generates the workout as an array.
+     * Actual function that generates the workout as an array.
      * @param duration int duration of workout in minutes.
      * @param muscles string array of muscles that individual wants to train.
      * @return ArrayList of exercises to perform over given amount of time.
