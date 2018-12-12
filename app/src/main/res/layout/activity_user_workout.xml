@@ -5,25 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserWorkout"
+    android:background="@drawable/getfit"
     android:id="@+id/workOut_list_container">
-
 
     <TextView
         android:id="@+id/workOut_list"
-        android:layout_width="328dp"
-        android:layout_height="256dp"
+        android:layout_width="378dp"
+        android:layout_height="321dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="#8fece9e9"
         android:dividerHeight="0.1dp"
         android:textAlignment="center"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button_start"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView5"
@@ -35,6 +38,7 @@
         android:fontFamily="sans-serif"
         android:gravity="center_horizontal"
         android:text="@string/list_view"
+        android:textColor="@android:color/background_dark"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,35 +47,36 @@
 
     <Button
         android:id="@+id/button_start"
-        android:layout_width="260dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="292dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/startworkout"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <Button
-        android:id="@+id/button2_regenerate"
-        android:layout_width="186dp"
-        android:layout_height="50dp"
+        android:layout_width="198dp"
+        android:layout_height="51dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:text="@string/startworkout"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button2_regenerate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workOut_list"
+        tools:ignore="UnknownId" />
+
+    <Button
+        android:id="@+id/button2_regenerate"
+        android:layout_width="176dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/regenerate_workout"
+        android:textColor="@android:color/background_dark"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_start"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <!--<ScrollView-->

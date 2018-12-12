@@ -17,59 +17,62 @@
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/Time_remaining"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/Time_remaining"
-        android:layout_width="266dp"
-        android:layout_height="121dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="215dp"
-        android:text="@string/text_timeremaining"
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="45sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <Button
-        android:id="@+id/button_timer_pause"
+        android:id="@+id/button_endExercise"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="56dp"
         android:text="@string/timer_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Time_remaining"
-        app:layout_constraintVertical_bias="0.503" />
-
-    <Button
-        android:id="@+id/button_reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/timer_reset"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.311"
-        app:layout_constraintStart_toEndOf="@+id/button_timer_pause"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.832"
-        tools:visibility="invisible" />
-
+        app:layout_constraintTop_toBottomOf="@+id/Exercise_name"
+        app:layout_constraintVertical_bias="0.635" />
 </android.support.constraint.ConstraintLayout>
+
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/Time_remaining"-->
+        <!--android:layout_width="266dp"-->
+        <!--android:layout_height="121dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginBottom="215dp"-->
+        <!--android:text="@string/text_timeremaining"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="@android:color/holo_red_dark"-->
+        <!--android:textSize="45sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.502"-->
+        <!--app:layout_constraintStart_toStartOf="parent" />-->
+
+
+
+    <!--<Button-->
+        <!--android:id="@+id/button_reset"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:text="@string/timer_reset"-->
+        <!--android:visibility="invisible"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.311"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/button_timer_pause"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_constraintVertical_bias="0.832"-->
+        <!--tools:visibility="invisible" />-->

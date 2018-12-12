@@ -2,7 +2,10 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/acme</item>
+        <item>@font/aladin</item>
         <item>@font/allerta</item>
         <item>@font/berkshire_swash</item>
+        <item>@font/bevan</item>
+        <item>@font/black_ops_one</item>
     </array>
 </resources>

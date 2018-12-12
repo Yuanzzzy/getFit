@@ -2,9 +2,9 @@
     <string name="app_name"> getFit </string>
     <string name="input_time"> WORKOUT TIME </string>
     <string name="button_label"> Enter </string>
-    <string name="timer_label">How Much Time Do You Have?</string>
+    <string name="timer_label">How much time do you have?</string>
     <string name="time_unit">MINUTES</string>
-    <string name="muscle_qustion">What Muscles Do You Want To Tone?</string>
+    <string name="muscle_qustion">What muscles do you want to work?</string>
     <string name="button_function">Next</string>
     <string name="muscle_part1">Abs</string>
     <string name="muscle_part2">Quads</string>
@@ -24,7 +24,7 @@
     <string name="timer_button">PAUSE</string>
     <string name="timer_reset">RESET</string>
     <string name="finish_line">WORKOUT COMPLETE! NICE</string>
-    <string name="button_EXIT">EXIT</string>
+    <string name="button_EXIT">TREAT YOURSELF</string>
     <string name="button_goAgain">GO AGAIN?</string>
 
 </resources>
