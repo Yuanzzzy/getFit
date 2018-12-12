@@ -1,9 +1,8 @@
 package com.example.liyuanzzzy.getfit;
-import java.util.List;
 import java.util.ArrayList;
 
 /**
- * Class that contains all possible exercises.
+ * Class for exercises.
  */
 public class Exercise {
     public String name;
