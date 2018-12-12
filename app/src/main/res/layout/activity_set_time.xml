@@ -46,10 +46,12 @@
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:textColor="@android:color/background_dark"
-        tools:backgroundTint="@android:color/background_light" />
+        android:visibility="visible"
+        tools:backgroundTint="@android:color/background_light"
+        android:autofillHints="" />
 
     <TextView
-        android:id="@+id/minutes"
+        android:id="@+id/time_unit"
         android:layout_width="121dp"
         android:layout_height="35dp"
         android:layout_alignParentTop="true"
@@ -57,7 +59,7 @@
         android:layout_marginStart="19dp"
         android:layout_marginTop="272dp"
         android:layout_marginEnd="15dp"
-        android:layout_toEndOf="@+id/editText"
+        android:layout_toEndOf="@+id/editTime"
         android:fontFamily="@font/bevan"
         android:text="@string/time_unit"
         android:textColor="@android:color/background_dark"

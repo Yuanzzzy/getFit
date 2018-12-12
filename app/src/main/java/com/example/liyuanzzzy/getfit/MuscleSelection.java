@@ -75,12 +75,13 @@ public class MuscleSelection extends AppCompatActivity {
                 break;
         }
 
-        Button generatingBut = (Button)findViewById(R.id.button_generate);
+        Button generatingBut = findViewById(R.id.button_generate);
         generatingBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MuscleSelection.this, GeneratingScreen.class);
                 Bundle extras = getIntent().getExtras();
+                assert extras != null;
                 String timer = extras.getString("timer");
                 i.putExtra("timer", timer);
                 i.putExtra("muscle", selection);

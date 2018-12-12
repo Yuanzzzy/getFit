@@ -145,7 +145,6 @@
         android:layout_height="52dp"
         android:layout_gravity="center_horizontal"
         android:fontFamily="@font/bevan"
-        android:onClick="finalSelection"
         android:text="@string/button_go"
         android:textAlignment="center"
         android:textColor="?attr/actionMenuTextColor"
