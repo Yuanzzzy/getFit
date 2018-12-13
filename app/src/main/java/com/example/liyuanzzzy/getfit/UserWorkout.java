@@ -1,23 +1,27 @@
 package com.example.liyuanzzzy.getfit;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.ListView;
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
+import android.os.Handler;
 import java.util.List;
+import java.util.Timer;
 
 public class UserWorkout extends AppCompatActivity implements View.OnClickListener {
-    Button btnStart, btnRegenerate;
+    private Button btnStart, btnRegenerate, btnComplete;
+    private Timer timer;
+    private boolean change;
+    private ArrayList<Exercise> finalWorkout;
+    private TextView wrklist;
+    private int userTime;
+    //private TextView wrkItem;
+    private CountDownTimer countDownTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,52 +29,112 @@ public class UserWorkout extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_user_workout);
         btnStart = findViewById(R.id.button_start);
         btnRegenerate = findViewById(R.id.button2_regenerate);
+        //btnComplete = findViewById(R.id.button_complete);
         //set up OnClickListeners
         btnStart.setOnClickListener(this);
         btnRegenerate.setOnClickListener(this);
-
-        Intent intent = getIntent();
+        //btnComplete.setOnClickListener(this);
         Bundle extras = getIntent().getExtras();
+        userTime = Integer.parseInt(extras.getString("timer"));
+        //wrkItem = findViewById(R.id.Item_name);
+        display(); //to display the list
+    }
 
+    /**
+     * method to display the list.
+     */
+    public void display() {
         GenerateWorkout workout = new GenerateWorkout();
-
+        Bundle extras = getIntent().getExtras();
         ArrayList<String> selection = extras.getStringArrayList("muscle");
-
-        int time = Integer.parseInt(extras.getString("timer"));
-        ArrayList<Exercise> finalWorkout = workout.generate(time, selection);
-
-        TextView tvName = (TextView) findViewById(R.id.textView5);
+        finalWorkout = workout.generate(userTime, selection);
+        TextView tvName = findViewById(R.id.textView5);
         if (extras != null){
             tvName.setText("YOUR WORKOUT TOTAL TIME: " + extras.getString("timer") + " MIN");
         }
-
-//        ArrayAdapter<String> adapter;
-//        String[] items = {"1", "2", "3"};
-//        adapter = new ArrayAdapter<String>(this, R.layout.activity_user_workout, items);
-//        ListView displayWorkout = (ListView) findViewById(R.id.workOut_list_content);
-////        displayWorkout.setAdapter(adapter);
-//
-//
-//        displayWorkout.setAdapter(adapter);
-        TextView wrklist = (TextView)findViewById(R.id.workOut_list);
+        wrklist = findViewById(R.id.workOut_list);
+        wrklist.setMovementMethod(new ScrollingMovementMethod());
         for (int i = 0; i < finalWorkout.size(); i++) {
             wrklist.setText(wrklist.getText() + finalWorkout.get(i).name + "  1 min.\n" + "30 sec. break\n");
         }
-
     }
 
+
+//    private void set() {
+//        final Handler handler = new Handler();
+//        final ArrayList<Exercise> workoutLst = new ArrayList<>(finalWorkout);
+//        btnComplete.setVisibility(View.VISIBLE);
+//        handler.post(new Runnable() {
+//            @Override
+//            public void run() {
+//                int i = 0;
+//                wrkItem.setText(wrkItem.getText() + finalWorkout.get(i).name);
+//                i++;
+//                wrkItem.setText(" ");
+//                if (i < workoutLst.size()) {
+//                    handler.postDelayed(this, 60000);
+//                }
+//            }
+//        });
+//    }
+
+//    public void countDown() {
+//        //time = (long) userTime /
+//        wrklist.setVisibility(View.GONE);
+//        wrkItem.setVisibility(View.VISIBLE);
+//        countDownTimer = new CountDownTimer(60000, 1000) {
+//            @Override
+//            public void onTick(long millisUntilFinished) {
+//                wrkItem.setText("seconds remaining: " + millisUntilFinished / 1000);
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//                btnComplete.setVisibility(View.VISIBLE);
+//                finish();
+//            }
+//        }.start();
+//    }
+
+//    public void timer() {
+//        new CountDownTimer(60000, 1000) {
+//            @Override
+//            public void onTick(long millis) {
+//                wrkItem.setText("seconds: " + (int) millis / 1000);
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//                btnComplete.setVisibility(View.VISIBLE);
+//            }
+//        }.start();
+//    }
+
+
+    /**
+     * button control
+     * @param v button id.
+     */
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_start:
+               // btnStart.setVisibility(View.INVISIBLE);
+//                for (int i = 0; i < workoutLst.size(); i++) {
+//                    timer();
+//                }
+
                 Intent i = new Intent(UserWorkout.this, EndScreen.class);
                 startActivity(i);
                 break;
             case R.id.button2_regenerate:
-                i = new Intent(UserWorkout.this, MuscleSelection.class);
-                startActivity(i);
+                wrklist.setText(" ");
+                display();
                 break;
+//            case R.id.button_complete:
+//                Intent i = new Intent(UserWorkout.this, EndScreen.class);
+//                startActivity(i);
+//                break;
         }
     }
 }
-

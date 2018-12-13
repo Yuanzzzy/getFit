@@ -26,5 +26,6 @@
     <string name="finish_line">WORKOUT COMPLETE! NICE</string>
     <string name="button_EXIT">TREAT YOURSELF</string>
     <string name="button_goAgain">GO AGAIN?</string>
+    <string name="button_complete">COMPLETE</string>
 
 </resources>

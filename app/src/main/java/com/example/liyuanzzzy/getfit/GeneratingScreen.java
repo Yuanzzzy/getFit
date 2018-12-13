@@ -7,7 +7,7 @@ import android.content.Intent;
 import java.util.ArrayList;
 
 public class GeneratingScreen extends AppCompatActivity {
-    private static int generateInterval = 1000;
+    private static int generateInterval = 800;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

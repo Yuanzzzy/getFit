@@ -18,6 +18,8 @@
         android:layout_marginBottom="8dp"
         android:background="#8fece9e9"
         android:dividerHeight="0.1dp"
+        android:fontFamily="sans-serif"
+        android:scrollbars="vertical"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="18sp"
@@ -56,6 +58,7 @@
         android:text="@string/startworkout"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/button2_regenerate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
@@ -69,7 +72,6 @@
         android:layout_height="47dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="2dp"
         android:text="@string/regenerate_workout"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
@@ -77,6 +79,37 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/bevan"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/workOut_list"
+        app:layout_constraintEnd_toEndOf="@+id/workOut_list"
+        app:layout_constraintStart_toStartOf="@+id/workOut_list"
+        app:layout_constraintTop_toTopOf="@+id/workOut_list" />
+
+    <!--<Button-->
+        <!--android:id="@+id/button_complete"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginEnd="134dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:text="@string/button_complete"-->
+        <!--android:visibility="invisible"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/button2_regenerate"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.931"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/button_start"-->
+        <!--app:layout_constraintVertical_bias="0.0" />-->
 
 
     <!--<ScrollView-->
