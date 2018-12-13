@@ -20,7 +20,7 @@ public class UserWorkout extends AppCompatActivity implements View.OnClickListen
     private ArrayList<Exercise> finalWorkout;
     private TextView wrklist;
     private int userTime;
-    //private TextView wrkItem;
+    private TextView wrkItem;
     private CountDownTimer countDownTimer;
 
     @Override
@@ -29,14 +29,14 @@ public class UserWorkout extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_user_workout);
         btnStart = findViewById(R.id.button_start);
         btnRegenerate = findViewById(R.id.button2_regenerate);
-        //btnComplete = findViewById(R.id.button_complete);
+        btnComplete = findViewById(R.id.button_complete);
         //set up OnClickListeners
         btnStart.setOnClickListener(this);
         btnRegenerate.setOnClickListener(this);
-        //btnComplete.setOnClickListener(this);
+        btnComplete.setOnClickListener(this);
         Bundle extras = getIntent().getExtras();
         userTime = Integer.parseInt(extras.getString("timer"));
-        //wrkItem = findViewById(R.id.Item_name);
+        wrkItem = findViewById(R.id.Item_name);
         display(); //to display the list
     }
 
@@ -96,20 +96,38 @@ public class UserWorkout extends AppCompatActivity implements View.OnClickListen
 //        }.start();
 //    }
 
-//    public void timer() {
-//        new CountDownTimer(60000, 1000) {
+//    public void timer(long time) {
+//        wrklist.setVisibility(View.GONE);
+//        wrkItem.setVisibility(View.VISIBLE);
+//        new CountDownTimer(time, 1000) {
 //            @Override
 //            public void onTick(long millis) {
-//                wrkItem.setText("seconds: " + (int) millis / 1000);
+//                btnComplete.setVisibility(View.VISIBLE);
+//                wrkItem.setText("Time remaininng: \n" + (int) millis / 1000);
 //            }
 //
 //            @Override
 //            public void onFinish() {
-//                btnComplete.setVisibility(View.VISIBLE);
+//                finish();
 //            }
 //        }.start();
 //    }
 
+//    public void breakTimer(long time) {
+//        wrklist.setVisibility(View.GONE);
+//        wrkItem.setVisibility(View.VISIBLE);
+//        new CountDownTimer(time, 1000) {
+//            @Override
+//            public void onTick(long millis) {
+//                wrkItem.setText("Break: \n" + (int) millis / 1000);
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//                finish();
+//            }
+//        }.start();
+//    }
 
     /**
      * button control
@@ -119,22 +137,20 @@ public class UserWorkout extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_start:
-               // btnStart.setVisibility(View.INVISIBLE);
-//                for (int i = 0; i < workoutLst.size(); i++) {
-//                    timer();
+                //ArrayList<Exercise> workoutLst = new ArrayList<>(finalWorkout);
+                btnStart.setVisibility(View.INVISIBLE);
+                btnComplete.setVisibility(View.VISIBLE);
+//                for (int item = 0; item < workoutLst.size(); item++) {
+//                    timer(600000);
 //                }
-
-                Intent i = new Intent(UserWorkout.this, EndScreen.class);
-                startActivity(i);
-                break;
             case R.id.button2_regenerate:
                 wrklist.setText(" ");
                 display();
                 break;
-//            case R.id.button_complete:
-//                Intent i = new Intent(UserWorkout.this, EndScreen.class);
-//                startActivity(i);
-//                break;
+            case R.id.button_complete:
+                Intent i = new Intent(UserWorkout.this, EndScreen.class);
+                startActivity(i);
+                break;
         }
     }
 }
